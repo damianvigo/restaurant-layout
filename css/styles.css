@@ -10,18 +10,23 @@
   --step-5: clamp(3.27rem, 2.79rem + 2.39vw, 4.58rem);
   --first-color: #545454; 
   --second-color: #E64B37;
-  --fontSans: sans-serif;
+  --white-color: #fff;
+  --black-color: #000;
+  --light-color: #EEE;
+  --font-sans: sans-serif;
   --font-weight-400: 400;
+  --font-weight-700: 700;
   --font-weight-900: 900;
+  --container-lg: 1200px;
+  --container-md: 992px;
+  --container-sm: 500px;
   }
-  
-  
   
   /* Reset */
   html {
     box-sizing: border-box;
-    overflow-x: hidden;
-    font-family: var(--fontSans);
+  /*   overflow-x: hidden; */
+    font-family: var(--font-sans);
     font-size: 16px;
     scroll-behavior: smooth;
   }
@@ -31,26 +36,125 @@
   *::before {
     box-sizing: inherit;
   }
-  
-  a {
-    transition: all 0.5s ease-in-out;
-    text-decoration: none;
-    color: var(--text-color);
-  }
-  
-  .dark {
-    background-color: var(--dark-color);
-    color: var(--light-color);
-    transition: all 0.3s ease-in;
-  }
-  
-  .light {
-    transition: all 0.3s ease-in;
-  }
-  
-  
+    
   body {
     margin: 0;
   /*   overflow-x: hidden; */
     color: var(--text-color);
   }
+
+  a {
+    transition: all 0.5s ease-in-out;
+    text-decoration: none;
+  }
+
+  img, video, iframe {
+    max-width: 100%;
+    height: auto;
+  }
+
+/* Utilities */
+
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-left {
+    text-align: left;
+  }
+  
+  .text-right {
+    text-align: right;
+  }
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.none {
+  display: none;
+}
+
+.section {
+  padding: 2rem 1rem;
+}
+
+.container-lg {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--container-lg);
+}
+
+.container-md {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--container-md);
+}
+
+.container-sm {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--container-sm);
+}
+
+/* 
+  ? 320px / 16px = 20em - xs
+  ? 480px / 16px = 30em - sm
+  ? 600px / 16px = 37.5em sm
+  ? 768px / 16px = 48em - md
+  ? 992px / 16px = 62em - lg
+  ? 1024px / 16px = 64em - lg
+  ? 1200px / 16px = 75em - xl
+*/
+
+/* Site Styles */
+.shipping {
+  padding: .5rem;
+  margin-bottom: 1rem;
+  background-color: var(--second-color);
+  color: var(--white-color);
+}
+
+.logo img {
+ width: 100%;
+  height: auto;
+}
+
+.search {
+  position: relative;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-search {
+  position: relative;
+  width: 100%;
+  padding: var(--step--2);
+  border: thin solid var(--black-color);
+  border-radius: 2rem;
+}
+
+.search > div {
+ position: absolute;
+ right: 0.3rem;
+ top: 0.3rem;
+ height: auto;
+ background-color: #E64B37;
+ padding: .5rem;
+ border-radius: 1rem;
+ fill: var(--white-color);
+ 
+}
+
+.search div svg {
+  width: 20px;
+  height: 20px;
+}
+
+.icons > img {
+  width: var(--step-3);
+  height: auto;
+}
+
