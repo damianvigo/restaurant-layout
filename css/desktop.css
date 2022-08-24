@@ -2,6 +2,53 @@
     max-width: 400px;
 }
 
+nav {
+    position: static;
+    width: 100%;
+    height: auto;
+    background-color: var(--white-color);
+}
+
+nav > ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    padding: 0rem;
+}
+
+nav ul li a:hover {
+    color: var(--second-color);
+    font-weight: var(--font-weight-700);
+}
+
+nav li ul {
+    width: 20%;
+}
+
+nav li:hover ul li {
+    border-bottom: thin solid var(--light-color);
+}
+
+nav li a {
+    color: var(--black-color);
+}
+
+nav li:hover {
+    background-color: unset;
+}
+
+nav li:hover ul {
+    width: 150px;
+    background-color: var(--black-alpha-color);
+}
+
+nav li:hover ul a {
+    color: var(--white-color);
+  }
+
+
 @media screen and (min-width: 992px) {
     .search {
         max-width: 700px;
