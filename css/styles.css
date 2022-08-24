@@ -46,6 +46,7 @@
 
   a {
     transition: all 0.5s ease-in-out;
+    font-size: var(--step--2);
   }
 
   img, video, iframe {
@@ -160,10 +161,14 @@
 
 nav {
   position: fixed;
+  z-index: 999;
   top: 0;
   width: 50vw;
   height: 100vh;
   background-color: var(--black-alpha-color);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
 nav ul {
@@ -210,4 +215,32 @@ nav li:hover ul a {
   display: block;
   color: white;
   padding: 1rem;
+}
+
+/* Slider */
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  z-index: 998;
+  top: 50%;
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  border-radius: 50%;
+  opacity: .5;
+  font-size: 2em;
+  color: var(--white-color);
+  background-color: var(--black-alpha-color);
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  opacity: .8;
+}
+
+.slick-next {
+  right: 0;
 }
