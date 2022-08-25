@@ -12,3 +12,32 @@ header > section {
 .search {
     max-width: 300px;
 }
+
+.categorys div,
+.brandings {
+    display: flex;
+    flex-direction: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.categorys div hr,
+.brandings hr {
+    width: 22%;
+}
+
+.categorys div h1,
+.brandings h2 {
+    font-size: var(--step-0);
+}
+
+.categorys p {
+    text-align: center;
+}
+
+.grid-categorys {
+    display: grid;
+    grid-template-columns: repeat(2, 47%);
+    justify-content: space-between;
+    align-items: center;
+}

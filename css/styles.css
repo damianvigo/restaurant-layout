@@ -44,9 +44,18 @@
     color: var(--text-color);
   }
 
+  h1 {
+/*     margin: 0; */
+    font-size: var(--step-2);
+  }
+
   a {
     transition: all 0.5s ease-in-out;
     font-size: var(--step--2);
+  }
+
+  p {
+    font-size: var(--step-0);
   }
 
   img, video, iframe {
@@ -119,7 +128,9 @@
 
 .logo img {
  width: 100%;
-  height: auto;
+ max-width: 400px;
+ height: auto;
+ cursor: pointer;
 }
 
 .search {
@@ -152,6 +163,11 @@
 .search div svg {
   width: 20px;
   height: 20px;
+}
+
+.icons {
+  padding: 1rem 0;
+  cursor: pointer;
 }
 
 .icons > img {
@@ -244,3 +260,67 @@ nav li:hover ul a {
 .slick-next {
   right: 0;
 }
+
+/* Categorys && brandings */
+
+.grid-categorys > article {
+  background-color: var(--black-color);
+}
+
+.grid-categorys > article img {
+  transition: all 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+.grid-categorys > article img:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+
+.categorys hr,
+.brandings hr {
+  width: 90%;
+}
+
+.categorys h1,
+.brandings h2 {
+  text-transform: uppercase;
+}
+
+.categorys h1::before {
+  content: 'Categorias ';
+  width: 100%;
+  color: var(--second-color);
+  font-weight: var(--font-weight-400);
+}
+
+.brandings h2::before {
+  content: 'Nuestras ';
+  width: 100%;
+  color: var(--second-color);
+  font-weight: var(--font-weight-400);
+}
+
+.categorys h1::after {
+  content: 'Destacadas';
+  width: 100%;
+  color: var(--second-color);
+  font-weight: var(--font-weight-900);
+}
+
+.brandings h2::after {
+  content: 'Marcas';
+  width: 100%;
+  color: var(--second-color);
+  font-weight: var(--font-weight-900);
+}
+
+.categorys p {
+ line-height: 2rem;
+ padding: 0 1rem;
+ text-align: left;
+}
+
+.categorys span:first-of-type {
+  display: block;
+}
+
