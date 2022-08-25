@@ -285,13 +285,6 @@ nav li ul {
   background-color: var(--black-alpha-color);
 }
 
-nav li:hover ul {
-  /*     opacity: 1;
-  visibility: visible; */
-  /*   padding-left: 0;
-  background-color: var(--black-alpha-color); */
-}
-
 nav li:hover ul a {
   display: block;
   color: var(--light-color);
