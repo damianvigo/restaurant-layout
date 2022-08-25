@@ -1,4 +1,9 @@
+import loadProducts from './api/api_products.js';
 import hamburguerMenu from './components/hamburguer_menu.js';
+import showMenu from './utils/show_menu.js';
+
+let productMl01 = 'https://api.mercadolibre.com/items?ids=MLA863712882',
+  productMl02 = 'https://api.mercadolibre.com/items/MLA646715969';
 
 $(document).ready(function () {
   $('#slider').slick({
@@ -66,6 +71,9 @@ $(document).ready(function () {
     nextArrow:
       '<button class="slick-next slick-arrow" aria-label="Next" type="button" style=""></button>',
   });
+
+  loadProducts(productMl01, productMl02);
 });
 
 hamburguerMenu('.hamburger-btn', '.panel', '.panel__menu');
+showMenu('.submenu', '.submenu__show');

@@ -4,12 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Damian Vigo" />
+    <link
+    rel="icon"
+    type="image/png"
+    href="https://damianvigo.com/favicon-16x16.png"
+  />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 600px)" />
+    <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 37.5em)" />
     <link
       rel="stylesheet"
       href="./css/desktop.css"
-      media="(min-width: 768px)"
+      media="(min-width: 48em)"
     />
     <link
       rel="stylesheet"
@@ -33,7 +45,7 @@
       <section class="container-lg">
         <div class="logo text-center">
           <a href="#">
-            <img src="./assets/img/logo.jpg" alt="" />
+            <img src="./assets/img/logo.jpg" alt="logotipo" />
           </a>
         </div>
         <div class="search">
@@ -78,36 +90,29 @@
           </div>
         </div>
         <aside class="icons text-center">
-          <img src="./assets/icon/1.jpg" alt="" />
-          <img src="./assets/icon/2.jpg" alt="" />
+          <img src="./assets/icon/1.jpg" alt="icono email" />
+          <img src="./assets/icon/2.jpg" alt="icono carrito de compras" />
         </aside>
       </section>
     </header>
     <nav class="panel">
       <ul>
         <li class="panel__menu">
-          <a class="panel__menu" href="#">PROMOS</a>
-          <ul>
+          <a class="submenu">PROMOS</a>
+          <ul class="submenu__show">
             <li><a class="panel__menu" href="#">Descuentos</a></li>
             <li><a class="panel__menu" href="#">2x1</a></li>
             <li><a class="panel__menu" href="#">Ofertas</a></li>
           </ul>
         </li>
-        <li>
-          <a href="">ALMACEN</a>
-          <ul class="panel__menu">
-            <li><a class="panel__menu" href="#">Descuentos</a></li>
-            <li><a class="panel__menu" href="#">2x1</a></li>
-            <li><a class="panel__menu" href="#">Ofertas</a></li>
-          </ul>
-        </li>
+        <li><a class="panel__menu" href="#">ALMACÉN</a></li>
         <li><a class="panel__menu" href="#">VINOS</a></li>
         <li><a class="panel__menu" href="#">ESPUMANTES</a></li>
         <li><a class="panel__menu" href="#">WHISKY</a></li>
         <li><a class="panel__menu" href="#">DESTILADOS</a></li>
         <li><a class="panel__menu" href="#">CERVEZAS</a></li>
         <li><a class="panel__menu" href="#">SIN ALCOHOL</a></li>
-        <li><a class="panel__menu" href="#">SOLO EN CABA</a></li>
+        <li><a class="panel__menu" href="#">SÓLO EN CABA</a></li>
       </ul>
     </nav>
     <main>
@@ -119,6 +124,7 @@
           <img src="./assets/img/banner-2.jpg" alt="" />
         </div>
       </section>
+      <div class="full-lg-screen">
       <section class="categorys text-center container-lg">
         <div>
           <hr />
@@ -126,26 +132,27 @@
           <hr />
         </div>
         <p>
-          Descubri nuestros productos para festejar con amigos!
+          Descubrí nuestros productos para festejar con amigos!
           <span
-            >Entra en cada categoria y elegi los mejores productos para armar el
+            >Entrá en cada categoría y elegí los mejores productos para armar el
             festejo que te mereces</span
           >
         </p>
-        <section class="grid-categorys section">
-          <article>
-            <img src="./assets/img/banner-categorys-1.jpg" alt="" />
-          </article>
-          <article>
-            <img src="./assets/img/banner-categorys-2.jpg" alt="" />
-          </article>
-          <article>
-            <img src="./assets/img/banner-categorys-3.jpg" alt="" />
-          </article>
-          <article>
-            <img src="./assets/img/banner-categorys-4.jpg" alt="" />
-          </article>
-        </section>
+          <section class="grid-categorys section">
+            <article>
+              <img src="./assets/img/banner-categorys-1.jpg" alt="" />
+            </article>
+            <article>
+              <img src="./assets/img/banner-categorys-2.jpg" alt="" />
+            </article>
+            <article>
+              <img src="./assets/img/banner-categorys-3.jpg" alt="" />
+            </article>
+            <article>
+              <img src="./assets/img/banner-categorys-4.jpg" alt="" />
+            </article>
+          </section>
+        </div>
       </section>
       <section>
         <div class="brandings text-center container-lg">
@@ -210,6 +217,9 @@
             </figure>
           </article>
         </section>
+      </section>
+      <section class="cards grid-fluid full-lg-screen section api-products container-lg">
+
       </section>
     </main>
 

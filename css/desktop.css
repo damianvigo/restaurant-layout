@@ -7,7 +7,7 @@
   width: 20vw;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 62em) {
   nav {
     position: relative;
     visibility: visible;
@@ -24,9 +24,11 @@
   nav > ul {
     display: flex;
     justify-content: center;
+    margin: 0.3rem;
   }
 
   nav li {
+    height: 4vh;
     line-height: 2rem;
     padding: 0rem;
   }
@@ -43,12 +45,16 @@
     padding-left: 0;
   }
 
-  nav li:hover ul li {
+  nav li a {
+    color: var(--black-color);
+  }
+
+  nav li ul li {
     border-bottom: thin solid var(--light-color);
   }
 
-  nav li a {
-    color: var(--black-color);
+  nav li ul li a {
+    color: var(--white-color);
   }
 
   nav li:hover {
