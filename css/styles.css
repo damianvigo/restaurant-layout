@@ -1,19 +1,20 @@
 :root {
-    /* * @link https://utopia.fyi/type/calculator?c=320,21,1.2,1140,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+  /* * @link https://utopia.fyi/type/calculator?c=320,21,1.2,1140,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
   --step--2: clamp(0.91rem, 0.89rem + 0.09vw, 0.96rem);
-  --step--1: clamp(1.09rem, 1.06rem + 0.19vw, 1.20rem);
-  --step-0: clamp(1.31rem, 1.24rem + 0.34vw, 1.50rem);
+  --step--1: clamp(1.09rem, 1.06rem + 0.19vw, 1.2rem);
+  --step-0: clamp(1.31rem, 1.24rem + 0.34vw, 1.5rem);
   --step-1: clamp(1.58rem, 1.47rem + 0.55vw, 1.88rem);
   --step-2: clamp(1.89rem, 1.73rem + 0.83vw, 2.34rem);
-  --step-3: clamp(2.27rem, 2.03rem + 1.20vw, 2.93rem);
+  --step-3: clamp(2.27rem, 2.03rem + 1.2vw, 2.93rem);
   --step-4: clamp(2.72rem, 2.38rem + 1.71vw, 3.66rem);
   --step-5: clamp(3.27rem, 2.79rem + 2.39vw, 4.58rem);
-  --first-color: #545454; 
-  --second-color: #E64B37;
+  --first-color: #545454;
+  --second-color: #e64b37;
+  --second-color-alpha: #e64b3770;
   --white-color: #fff;
   --black-color: #000;
   --black-alpha-color: rgba(0, 0, 0, 0.75);
-  --light-color: #EEE;
+  --light-color: #e0e0e0;
   --font-sans: sans-serif;
   --font-weight-400: 400;
   --font-weight-700: 700;
@@ -21,61 +22,63 @@
   --container-lg: 1200px;
   --container-md: 992px;
   --container-sm: 500px;
-  }
-  
-  /* Reset */
-  html {
-    box-sizing: border-box;
+}
+
+/* Reset */
+html {
+  box-sizing: border-box;
   /*   overflow-x: hidden; */
-    font-family: var(--font-sans);
-    font-size: 16px;
-    scroll-behavior: smooth;
-  }
-  
-  *,
-  *::after,
-  *::before {
-    box-sizing: inherit;
-  }
-    
-  body {
-    margin: 0;
-    overflow-x: hidden;
-    color: var(--text-color);
-  }
+  font-family: var(--font-sans);
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
 
-  h1 {
-/*     margin: 0; */
-    font-size: var(--step-2);
-  }
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
 
-  a {
-    transition: all 0.5s ease-in-out;
-    font-size: var(--step--2);
-  }
+body {
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--text-color);
+}
 
-  p {
-    font-size: var(--step-0);
-  }
+h1 {
+  /*     margin: 0; */
+  font-size: var(--step-2);
+}
 
-  img, video, iframe {
-    max-width: 100%;
-    height: auto;
-  }
+a {
+  transition: all 0.3s ease-in-out;
+  font-size: var(--step--2);
+}
+
+p {
+  font-size: var(--step-0);
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
 
 /* Utilities */
 
-  .text-center {
-    text-align: center;
-  }
-  
-  .text-left {
-    text-align: left;
-  }
-  
-  .text-right {
-    text-align: right;
-  }
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
 
 .hidden {
   visibility: hidden;
@@ -120,17 +123,17 @@
 
 /* Site Styles */
 .shipping {
-  padding: .5rem;
+  padding: 0.5rem;
   margin-bottom: 1rem;
   background-color: var(--second-color);
   color: var(--white-color);
 }
 
 .logo img {
- width: 100%;
- max-width: 400px;
- height: auto;
- cursor: pointer;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  cursor: pointer;
 }
 
 .search {
@@ -149,20 +152,20 @@
 }
 
 .search > div {
- position: absolute;
- right: 0.3rem;
- top: 0.3rem;
- height: auto;
- background-color: #E64B37;
- padding: .5rem;
- border-radius: 1rem;
- fill: var(--white-color);
- 
+  position: absolute;
+  right: 0.3rem;
+  top: 0.3rem;
+  height: auto;
+  background-color: #e64b37;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  fill: var(--white-color);
+  cursor: pointer;
 }
 
 .search div svg {
-  width: 20px;
-  height: 20px;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .icons {
@@ -177,7 +180,7 @@
 
 nav {
   position: fixed;
-  z-index: 999;
+  z-index: 997;
   top: 0;
   width: 50vw;
   height: 100vh;
@@ -185,26 +188,63 @@ nav {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translate(-100%, 0%);
 }
+
+nav.is-active {
+  transform: translate(0, 0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.hamburger-btn {
+  position: fixed;
+  z-index: 999;
+  bottom: 1vh;
+  right: 1vw;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+
+.hamburger {
+  background-color: var(--second-color) !important;
+}
+
+/* .hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before,
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner:after,
+.hamburger.is-active .hamburger-inner:before {
+} */
 
 nav ul {
   list-style: none;
 }
 
 nav li {
-  padding-bottom: 1rem;
-  padding-top: 1rem;
+  height: 8vh;
+  line-height: 5rem;
   transition: background-color 0.3s ease-in-out;
 }
 
 nav li a {
+  display: block;
   text-decoration: none;
   color: var(--white-color);
   padding-left: 1rem;
 }
 
 nav li:hover {
-  background-color: var(--second-color);
+  background-color: var(--second-color-alpha);
   cursor: pointer;
 }
 
@@ -214,6 +254,8 @@ nav > ul {
 
 nav li ul {
   position: absolute;
+  left: 50vw;
+  top: 10vw;
   opacity: 0;
   width: 100%;
   visibility: hidden;
@@ -229,11 +271,14 @@ nav li:hover ul {
 
 nav li:hover ul a {
   display: block;
-  color: white;
-  padding: 1rem;
+  color: var(--light-color);
 }
 
 /* Slider */
+
+#slider > * {
+  z-index: 0;
+}
 
 .slick-prev,
 .slick-next {
@@ -244,7 +289,7 @@ nav li:hover ul a {
   height: var(--step-4);
   border: none;
   border-radius: 50%;
-  opacity: .5;
+  opacity: 0.5;
   font-size: var(--step-0);
   color: var(--white-color);
   background-color: var(--black-alpha-color);
@@ -253,16 +298,16 @@ nav li:hover ul a {
 }
 
 .slick-prev::before {
-  content: '◀'
+  content: '◀';
 }
 
 .slick-next:after {
-  content: '▶'
+  content: '▶';
 }
 
 .slick-prev:hover,
 .slick-next:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .slick-next {
@@ -280,7 +325,7 @@ nav li:hover ul a {
 }
 
 .grid-categorys > article img:hover {
-  opacity: .5;
+  opacity: 0.5;
   cursor: pointer;
 }
 
@@ -323,9 +368,9 @@ nav li:hover ul a {
 }
 
 .categorys p {
- line-height: 2rem;
- padding: 0 1rem;
- text-align: left;
+  line-height: 2rem;
+  padding: 0 1rem;
+  text-align: left;
 }
 
 .categorys span:first-of-type {
@@ -335,4 +380,3 @@ nav li:hover ul a {
 /* .our-brandings > article:hover {
   cursor: pointer;
 } */
-
