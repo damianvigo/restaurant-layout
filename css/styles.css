@@ -40,7 +40,7 @@
     
   body {
     margin: 0;
-  /*   overflow-x: hidden; */
+    overflow-x: hidden;
     color: var(--text-color);
   }
 
@@ -240,16 +240,24 @@ nav li:hover ul a {
   position: absolute;
   z-index: 998;
   top: 50%;
-  width: 4rem;
-  height: 4rem;
+  width: var(--step-4);
+  height: var(--step-4);
   border: none;
   border-radius: 50%;
   opacity: .5;
-  font-size: 2em;
+  font-size: var(--step-0);
   color: var(--white-color);
   background-color: var(--black-alpha-color);
   cursor: pointer;
   transition: opacity 0.3s ease;
+}
+
+.slick-prev::before {
+  content: '◀'
+}
+
+.slick-next:after {
+  content: '▶'
 }
 
 .slick-prev:hover,
@@ -323,4 +331,8 @@ nav li:hover ul a {
 .categorys span:first-of-type {
   display: block;
 }
+
+/* .our-brandings > article:hover {
+  cursor: pointer;
+} */
 

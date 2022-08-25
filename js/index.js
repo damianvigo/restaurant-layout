@@ -7,10 +7,22 @@ $(document).ready(function () {
     speed: 700,
     zIndex: 0,
     mobileFirst: true,
+    prevArrow:
+      '<button class="slick-prev slick-arrow" aria-label="Previous" type="button" style=""></button>',
+    nextArrow:
+      '<button class="slick-next slick-arrow" aria-label="Next" type="button" style=""></button>',
   });
 
-  const $slickPrev = document.querySelector('.slick-prev'),
-    $slickNext = document.querySelector('.slick-next');
-  $slickPrev.textContent = '◄';
-  $slickNext.textContent = '►';
+  $('#our-brandings').slick({
+    autoplay: true,
+    slidesToShow: 4,
+    autoplaySpeed: 1500,
+    speed: 700,
+    zIndex: 0,
+    mobileFirst: true,
+    prevArrow:
+      '<button class="slick-prev slick-arrow" aria-label="Previous" type="button" style=""></button>',
+    nextArrow:
+      '<button class="slick-next slick-arrow" aria-label="Next" type="button" style=""></button>',
+  });
 });
