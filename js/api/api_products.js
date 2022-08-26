@@ -22,7 +22,7 @@ async function loadProducts(productApiMl01, productApiMl02) {
 
       $templateProduct01 += `
         <article class='card'>
-                <img src='${pictures[0].url}' />
+                <img src='${pictures[0].url}' alt='auriculares' />
                 <small>$2.499</small>
                 <div>
                     <span class='price'><b>$${base_price}</b></span>
@@ -41,7 +41,7 @@ async function loadProducts(productApiMl01, productApiMl02) {
       const { title, pictures, base_price } = productMl02;
       $templateProduct02 += `
           <article class='card'>
-                  <img src='${pictures[0].url}' />
+                  <img src='${pictures[0].url}' alt='vaporera electrica' />
                   <small>$9.299</small>
                   <div>
                       <span class='price'><b>$${base_price}</b></span>
