@@ -1,43 +1,42 @@
 header > section {
-    display: flex;
-    flex-direction: wrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo img {
-    max-width: 200px;
+  max-width: 200px;
 }
 
 .search {
-    max-width: 300px;
+  max-width: 300px;
 }
 
 .categorys div,
 .brandings {
-    display: flex;
-    flex-direction: wrap;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .categorys div hr,
 .brandings hr {
-    width: 22%;
+  width: 22%;
 }
 
 .categorys div h1,
 .brandings h2 {
-    font-size: var(--step-0);
+  font-size: var(--step-0);
 }
 
 .categorys p {
-    text-align: center;
+  text-align: center;
 }
 
 .grid-categorys {
-    display: grid;
-    grid-template-columns: repeat(2, 47%);
-    justify-content: space-between;
-    align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 47%);
+  justify-content: space-between;
+  align-items: center;
 }
